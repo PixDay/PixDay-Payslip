@@ -7,16 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /* Flex Layout */
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+/* Angular Material */
+
+/* Personal Components */
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-
-/* Angular Material */
-
-/* Personal Components */
-
 
 @NgModule({
   declarations: [
