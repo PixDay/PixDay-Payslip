@@ -10,6 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { StatisticsComponent } from './pages/statistics/statistics.component';
 
 /* Angular Material */
 
@@ -21,7 +22,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
