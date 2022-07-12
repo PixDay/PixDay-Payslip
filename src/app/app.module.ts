@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /* Flex Layout */
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 /* Angular Material */
 
@@ -17,7 +18,8 @@ import { LoginComponent } from './pages/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
