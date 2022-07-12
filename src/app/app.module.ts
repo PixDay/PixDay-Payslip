@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 /* Angular Material */
+import { MatIconModule } from '@angular/material/icon';
 
 /* Personal Components */
 import { LoginComponent } from './pages/login/login.component';
@@ -30,7 +31,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
