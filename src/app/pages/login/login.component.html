@@ -10,7 +10,7 @@
         <!-- FORM CONTENT -->
         <div class="form" fxLayout="column">
             <h3 class="small-padding-bot">Commencer gratuitement</h3>
-            <h1 class="medium-padding-bot">Connectez-vous</h1>
+            <h1 class="typewriter">Connectez-vous</h1>
             <div class="inputs-container" fxLayout="column">
                 <div fxLayout="row" fxLayoutAlign="space-between center">
                     <mat-form-field class="half-input" appearance="outline">
@@ -42,10 +42,14 @@
                 <div class="line"></div>
             </div>
             <div class="oauth-button-container" fxLayout="column">
-                <button class="facebook">Facebook</button>
-                <button class="google">Google</button>
-                <button class="github">GitHub</button>
-                <button class="Apple">Apple</button>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center"><img class="svg-icons" src="assets/images/facebook.svg" />Facebook</button>
+                    <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center"><img class="svg-icons" src="assets/images/google.svg" />Google</button>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center"><img class="svg-icons" src="assets/images/github.svg" />GitHub</button>
+                    <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center"><img class="svg-icons" src="assets/images/apple.svg" />Apple</button>
+                </div>
             </div>
         </div>
     </div>
