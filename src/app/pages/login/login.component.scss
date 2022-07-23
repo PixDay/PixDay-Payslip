@@ -196,6 +196,7 @@ mat-form-field.mat-form-field
     margin-bottom: 20px;
     background-color: rgba(240, 240, 240, 0.2);
     background-color: #323644;
+    transition: background-color 0.75s;
 }
 
 .oauth-button:hover
@@ -203,4 +204,10 @@ mat-form-field.mat-form-field
     cursor: pointer;
     background-color: rgba(39, 42, 55, 0.50);
     border-color: #218be8;
+    transition: background-color 0.75s;
+}
+
+.clickable
+{
+    cursor: pointer;
 }

@@ -31,8 +31,8 @@
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-label>Mot de passe</mat-label>
-                    <input matInput placeholder="Mot de passe">
-                    <mat-icon class="input-icon" matSuffix>visibility</mat-icon>
+                    <input type="{{ passwordVisibility }}" matInput placeholder="Mot de passe">
+                    <mat-icon class="input-icon clickable" (click)="togglePasswordVisibility()" matSuffix>visibility</mat-icon>
                   </mat-form-field>
                 <button class="primary-button" mat-button>Se connecter</button>
             </div>
