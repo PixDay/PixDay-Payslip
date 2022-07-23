@@ -1,30 +1,53 @@
-<div fxLayout="column">
-    <!--TOP NAVBAR -->
-    <div class="nav-bar" fxLayout="row" fxLayoutAlign="start center" >
-        <mat-icon>circle</mat-icon>
-        <h2>Pix Payslip</h2>
-        <h3 class="text-button">Register</h3>
-    </div>
+<div class="full-height background-image" fxLayout="row">
+    <div class="ful-height half-width background-black" fxLayout="column" >
+        <!--TOP NAVBAR -->
+        <div class="nav-bar" fxLayout="row" fxLayoutAlign="start center" >
+            <mat-icon class="cicle-icon">circle</mat-icon>
+            <h2>Pix Payslip</h2>
+            <h3 class="text-button">Register</h3>
+        </div>
 
-    <!-- FORM CONTENT -->
-    <div class="form" fxLayout="column">
-        <h3>Commencer gratuitement</h3>
-        <h1>Connectez-vous</h1>
-        <div class="inputs-container" fxLayout="column">
-            <div fxLayout="row">
-                <input />
-                <input />
+        <!-- FORM CONTENT -->
+        <div class="form" fxLayout="column">
+            <h3 class="small-padding-bot">Commencer gratuitement</h3>
+            <h1 class="medium-padding-bot">Connectez-vous</h1>
+            <div class="inputs-container" fxLayout="column">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <mat-form-field class="half-input" appearance="outline">
+                        <mat-label>Prénom</mat-label>
+                        <input matInput placeholder="Prénom">
+                        <mat-icon class="input-icon" matSuffix>badge</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="half-input" appearance="outline">
+                        <mat-label>Nom</mat-label>
+                        <input matInput placeholder="Nom">
+                        <mat-icon class="input-icon" matSuffix>badge</mat-icon>
+                    </mat-form-field>
+                </div>
+                <mat-form-field appearance="outline">
+                    <mat-label>E-mail</mat-label>
+                    <input matInput placeholder="E-mail">
+                    <mat-icon class="input-icon" matSuffix>mail</mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Mot de passe</mat-label>
+                    <input matInput placeholder="Mot de passe">
+                    <mat-icon class="input-icon" matSuffix>visibility</mat-icon>
+                  </mat-form-field>
+                <button class="primary-button" mat-button>Se connecter</button>
             </div>
-            <input />
-            <input />
-            <button>Se connecter</button>
-        </div>
-        <div class="separator"></div>
-        <div fxLayout="row">
-            <button>Facebook</button>
-            <button>Google</button>
-            <button>GitHub</button>
+            <div class="separator" fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="line"></div>
+                <h4>Se connecter avec :</h4>
+                <div class="line"></div>
+            </div>
+            <div class="oauth-button-container" fxLayout="column">
+                <button class="facebook">Facebook</button>
+                <button class="google">Google</button>
+                <button class="github">GitHub</button>
+                <button class="Apple">Apple</button>
+            </div>
         </div>
     </div>
+    <div class="full-height half-width background-black-gradient"></div>
 </div>
-<img class="logo" src="assets/images/logo.png" alt="logo" />

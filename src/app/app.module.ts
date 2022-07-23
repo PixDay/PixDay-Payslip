@@ -10,6 +10,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 /* Angular Material */
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 /* Personal Components */
 import { LoginComponent } from './pages/login/login.component';
@@ -32,7 +35,10 @@ import { ProfileComponent } from './pages/profile/profile.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
