@@ -4,13 +4,13 @@
         <div class="nav-bar" fxLayout="row" fxLayoutAlign="start center" >
             <mat-icon class="cicle-icon">circle</mat-icon>
             <h2>Pix Payslip</h2>
-            <h3 class="text-button">Créer un compte</h3>
+            <h3 class="text-button" routerLink="/login">J'ai déjà un compte</h3>
         </div>
 
         <!-- FORM CONTENT -->
         <div class="form" fxLayout="column">
-            <h3 class="small-padding-bot">Commencer gratuitement</h3>
-            <h1 class="typewriter">Connectez-vous</h1>
+            <h3 class="small-padding-bot">Inscrivez-vous gratuitement</h3>
+            <h1 class="typewriter">Créer votre compte</h1>
             <p class="warning-text" *ngIf="warningMessage.length !== 0">{{ warningMessage }}</p>
             <div class="inputs-container" fxLayout="column">
                 <div fxLayout="row" fxLayoutAlign="space-between center">
@@ -35,11 +35,11 @@
                     <input type="{{ passwordVisibility }}" matInput placeholder="Mot de passe" [(ngModel)]="user.password">
                     <mat-icon class="input-icon clickable" (click)="togglePasswordVisibility()" matSuffix>visibility</mat-icon>
                   </mat-form-field>
-                <button class="primary-button" mat-button (click)="connectUser()">Se connecter</button>
+                <button class="primary-button" mat-button (click)="connectUser()">Créer mon compte</button>
             </div>
             <div class="separator" fxLayout="row" fxLayoutAlign="space-between center">
                 <div class="line"></div>
-                <h4>Se connecter avec :</h4>
+                <h4>Créer un compte avec :</h4>
                 <div class="line"></div>
             </div>
             <div class="oauth-button-container" fxLayout="column">

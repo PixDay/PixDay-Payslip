@@ -22,14 +22,6 @@ export class LoginComponent implements OnInit {
   }
 
   checkIfInputsAreValid(): boolean {
-    if (this.user.firstName === '') {
-      this.warningMessage = 'Entrez votre prénom *';
-      return false;
-    }
-    if (this.user.lastName === '') {
-      this.warningMessage = 'Entrez votre nom *';
-      return false;
-    }
     if (this.user.email === '') {
       this.warningMessage = 'Entrez une adresse email valide *';
       return false;

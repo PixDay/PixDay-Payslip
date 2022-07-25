@@ -4,7 +4,7 @@
         <div class="nav-bar" fxLayout="row" fxLayoutAlign="start center" >
             <mat-icon class="cicle-icon">circle</mat-icon>
             <h2>Pix Payslip</h2>
-            <h3 class="text-button">Créer un compte</h3>
+            <h3 class="text-button" routerLink="/register">Créer un compte</h3>
         </div>
 
         <!-- FORM CONTENT -->
@@ -13,18 +13,6 @@
             <h1 class="typewriter">Connectez-vous</h1>
             <p class="warning-text" *ngIf="warningMessage.length !== 0">{{ warningMessage }}</p>
             <div class="inputs-container" fxLayout="column">
-                <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <mat-form-field class="half-input" appearance="outline">
-                        <mat-label>Prénom</mat-label>
-                        <input matInput placeholder="Prénom" [(ngModel)]="user.firstName">
-                        <mat-icon class="input-icon" matSuffix>badge</mat-icon>
-                    </mat-form-field>
-                    <mat-form-field class="half-input" appearance="outline">
-                        <mat-label>Nom</mat-label>
-                        <input matInput placeholder="Nom" [(ngModel)]="user.lastName">
-                        <mat-icon class="input-icon" matSuffix>badge</mat-icon>
-                    </mat-form-field>
-                </div>
                 <mat-form-field appearance="outline">
                     <mat-label>E-mail</mat-label>
                     <input matInput placeholder="E-mail" [(ngModel)]="user.email">
