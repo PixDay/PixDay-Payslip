@@ -1,1 +1,58 @@
-<p>register works!</p>
+<div class="full-height background-image" fxLayout="row">
+    <div class="ful-height half-width background-black" fxLayout="column" >
+        <!--TOP NAVBAR -->
+        <div class="nav-bar" fxLayout="row" fxLayoutAlign="start center" >
+            <mat-icon class="cicle-icon">circle</mat-icon>
+            <h2>Pix Payslip</h2>
+            <h3 class="text-button">Créer un compte</h3>
+        </div>
+
+        <!-- FORM CONTENT -->
+        <div class="form" fxLayout="column">
+            <h3 class="small-padding-bot">Commencer gratuitement</h3>
+            <h1 class="typewriter">Connectez-vous</h1>
+            <p class="warning-text" *ngIf="warningMessage.length !== 0">{{ warningMessage }}</p>
+            <div class="inputs-container" fxLayout="column">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <mat-form-field class="half-input" appearance="outline">
+                        <mat-label>Prénom</mat-label>
+                        <input matInput placeholder="Prénom" [(ngModel)]="user.firstName">
+                        <mat-icon class="input-icon" matSuffix>badge</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="half-input" appearance="outline">
+                        <mat-label>Nom</mat-label>
+                        <input matInput placeholder="Nom" [(ngModel)]="user.lastName">
+                        <mat-icon class="input-icon" matSuffix>badge</mat-icon>
+                    </mat-form-field>
+                </div>
+                <mat-form-field appearance="outline">
+                    <mat-label>E-mail</mat-label>
+                    <input matInput placeholder="E-mail" [(ngModel)]="user.email">
+                    <mat-icon class="input-icon" matSuffix>mail</mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Mot de passe</mat-label>
+                    <input type="{{ passwordVisibility }}" matInput placeholder="Mot de passe" [(ngModel)]="user.password">
+                    <mat-icon class="input-icon clickable" (click)="togglePasswordVisibility()" matSuffix>visibility</mat-icon>
+                  </mat-form-field>
+                <button class="primary-button" mat-button (click)="connectUser()">Se connecter</button>
+            </div>
+            <div class="separator" fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="line"></div>
+                <h4>Se connecter avec :</h4>
+                <div class="line"></div>
+            </div>
+            <div class="oauth-button-container" fxLayout="column">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center"><img class="svg-icons" src="assets/images/facebook.svg" />Facebook</button>
+                    <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center"><img class="svg-icons" src="assets/images/google.svg" />Google</button>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center"><img class="svg-icons" src="assets/images/github.svg" />GitHub</button>
+                    <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center"><img class="svg-icons" src="assets/images/apple.svg" />Apple</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full-height half-width background-black-gradient"></div>
+</div>

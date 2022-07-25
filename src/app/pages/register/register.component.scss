@@ -1,0 +1,224 @@
+.background-image
+{
+    background-image: url('/assets/images/pix-login-background.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.background-black
+{
+    background: rgba(39, 42, 55, 0.98);
+}
+
+.background-black-gradient
+{
+    background: linear-gradient(to right, rgba(39, 42, 55, 0.98) 0%, rgba(39, 42, 55, 0.40) 100%);
+}
+
+.half-width
+{
+    width: 50%;
+}
+
+.nav-bar
+{
+    padding-top: 48px;
+    padding-left: 64px;
+    padding-bottom: 96px;
+}
+
+.cicle-icon
+{
+    color: #218be8;
+    padding-right: 16px;
+}
+
+.typewriter
+{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #6c7483; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .05em; /* Adjust as needed */
+    animation: typing 1.2s steps(50, end), blink-caret .6s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 220px }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #6c7483; }
+}
+
+.warning-text
+{
+    color: #F00;
+    font-size: 12px;
+}
+
+h1
+{
+    margin: 0;
+    color: #FFF;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    padding-right: 8px;
+    width: min-content;
+}
+
+h2
+{
+    margin: 0;
+    color: #FFF;
+    padding-right: 36px;
+}
+
+h3
+{
+    margin: 0;
+    color: #6c7483;
+    font-size: 18px;
+}
+
+h4
+{
+    margin: 0;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.small-padding-bot
+{
+    padding-bottom: 12px;
+}
+
+.medium-padding-bot
+{
+    padding-bottom: 32px;
+}
+
+.text-button:hover
+{
+    color:#FFF;
+    cursor: pointer;
+}
+
+.form
+{
+    padding-left: 64px;
+}
+
+.inputs-container
+{
+    width: 70%;
+}
+
+.half-input
+{
+    width: 47%;
+}
+
+mat-form-field.mat-form-field
+{
+    background-color: rgb(50 54 68);
+    border-radius: 5px;
+    color: #FFF;
+    margin-bottom: 20px;;
+}
+
+/* Border */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white;
+}
+
+::ng-deep .mat-form-field-wrapper{
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #FFF;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: #FFF !important;
+}
+
+::ng-deep .mat-form-field-label
+{
+    color: #6c7483 !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-focused .mat-form-field-outline-thick {
+    /*change color of outline*/
+    color: red !important;
+}
+
+.input-icon
+{
+    color: #6c7483 !important;
+}
+
+.primary-button
+{
+    background-color: #218be8;
+    color: #FFF;
+}
+
+.separator
+{
+    width: 70%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.line
+{
+    height: 1px;
+    background-color: #FFF;
+    width: 30%;
+}
+
+.oauth-button-container
+{
+    width: 70%;
+}
+
+.svg-icons
+{
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.oauth-button
+{
+    color: #FFF;
+    width: 47%;
+    height: 55px;
+    margin-bottom: 20px;
+    background-color: rgba(240, 240, 240, 0.2);
+    background-color: #323644;
+    transition: background-color 0.75s;
+}
+
+.oauth-button:hover
+{
+    cursor: pointer;
+    background-color: rgba(39, 42, 55, 0.50);
+    border-color: #218be8;
+    transition: background-color 0.75s;
+}
+
+.clickable
+{
+    cursor: pointer;
+}
+
+.clickable:hover
+{
+    color: #DDD !important;
+}
