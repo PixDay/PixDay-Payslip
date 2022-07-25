@@ -6,6 +6,21 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
+/* Firebase */
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCz6fefp-1GjV5cl5wuWEPGEkrFWHcdYh0",
+  authDomain: "pixday-9cb30.firebaseapp.com",
+  projectId: "pixday-9cb30",
+  storageBucket: "pixday-9cb30.appspot.com",
+  messagingSenderId: "305419885586",
+  appId: "1:305419885586:web:5e2cc794b25fa13ae68ccb",
+  measurementId: "G-7EPKCVEFYP"
+};
+
 /* Flex Layout */
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -36,6 +51,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
     FlexLayoutModule,
     MatIconModule,
     MatFormFieldModule,
