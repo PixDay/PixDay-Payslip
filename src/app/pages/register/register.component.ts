@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/models/User.model';
+import { User, initUser } from 'src/app/models/User.model';
 
 @Component({
   selector: 'app-register',
@@ -10,11 +10,12 @@ export class RegisterComponent implements OnInit {
 
   passwordVisibility: string = 'password';
   warningMessage: string = '';
-  user: User = new User();
+  user: User = {} as User;
 
   constructor() { }
 
   ngOnInit(): void {
+    initUser(this.user);
   }
 
   togglePasswordVisibility() {

@@ -1,15 +1,4 @@
-export class User {
-
-    constructor() {
-        this.id = 0;
-        this.firstName = '';
-        this.lastName = '';
-        this.email = '';
-        this.password = '';
-        this.role = '';
-        this.picture = '';
-    }
-
+export interface User {
     id: number;
     firstName: string;
     lastName: string;
@@ -17,4 +6,14 @@ export class User {
     password: string;
     role: string;
     picture: string;
+};
+
+export function initUser(user: User) {
+    user.id = 0;
+    user.firstName = '';
+    user.lastName = '';
+    user.email = '';
+    user.password = '';
+    user.role = '';
+    user.picture = '';
 }
