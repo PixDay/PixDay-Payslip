@@ -39,8 +39,10 @@ export class AuthService {
   // Create a new user with email and password
   async signUp(signUpParameters: User)
   {
-    firebase.auth().createUserWithEmailAndPassword(signUpParameters.email, signUpParameters.password).then
-    ((userCredential: any) => {
+    let user;
+
+    await firebase.auth().createUserWithEmailAndPassword(signUpParameters.email, signUpParameters.password).then
+    (async (userCredential: any) => {
       const data: User = {
         id: userCredential.user.uid,
         email: userCredential.user.email,
@@ -50,22 +52,28 @@ export class AuthService {
         role: 'user',
         picture: ''
       };
-      return this.updateUserData(data);
-    })
+      await this.updateUserData(data);
+      user = await this.getUser((userCredential as any).user.uid);
+      localStorage.setItem('stringifiedUser', JSON.stringify(user));
+      return await user;
+    });
   }
 
   // Sign in with email and password
   async signIn(signInParameters: User)
   {
-    firebase.auth().signInWithEmailAndPassword(signInParameters.email, signInParameters.password).then
-    (async ( userCredential) => {
-      let userId = (userCredential as any).user.uid;
-      await this.getUser(userId);
-      return userCredential;
-    })
+    let user;
+
+    await firebase.auth().signInWithEmailAndPassword(signInParameters.email, signInParameters.password).then
+    (async (userCredential) => {
+      user = await this.getUser((userCredential as any).user.uid);
+
+      localStorage.setItem('stringifiedUser', JSON.stringify(user));
+      return await user;
+    });
   }
   
-  private updateUserData(user: User)
+  private async updateUserData(user: User)
   {
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.id}`);
 
@@ -77,7 +85,7 @@ export class AuthService {
       password: 'P4ssw0rd',
       role: user.role,
       picture: ''
-    }
-    return userRef.set(data, { merge : true });
+    };
+    return await userRef.set(data, { merge : true });
   }
 }

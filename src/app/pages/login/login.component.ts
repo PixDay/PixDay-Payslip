@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User, initUser } from 'src/app/models/User.model';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ export class LoginComponent implements OnInit {
   warningMessage: string = '';
   user: User = {} as User;
 
-  constructor() { }
+  constructor(public authService: AuthService, public router: Router) { }
 
   ngOnInit(): void {
     initUser(this.user);
@@ -35,12 +37,18 @@ export class LoginComponent implements OnInit {
     return (true);
   }
 
-  connectUser() {
+  async connectUser() {
     let isInputValid: boolean = false;
 
     isInputValid = this.checkIfInputsAreValid();
     if (isInputValid) {
-      console.log('Connecting user...');
+      await this.authService.signIn(this.user);
+      if (localStorage.getItem('stringifiedUser') !== null) {
+        this.router.navigate(['/dashboard']);
+      }
+      else {
+        // Indicate that the user could not connect
+      }
     }
   }
 }

@@ -1,1 +1,111 @@
-<p>dashboard works!</p>
+<div class="full-height" fxLayout="row">
+    
+    <div class="dashboard-panel-left" fxLayout="column" fxLayoutAlign="space-between center">
+        <div class="full-width">
+            <div class="navigation-header" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="cicle-icon">circle</mat-icon>
+                <h2>Pix Payslip</h2>
+            </div>
+            <div class="line"></div>
+            <div class="navigation-button" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="navigation-icon">dashboard</mat-icon>
+                <div>Tableau de bord</div>
+            </div>
+            <div class="navigation-button" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="navigation-icon">query_stats</mat-icon>
+                <div>Statistiques</div>
+            </div>
+            <div class="navigation-button" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="navigation-icon">person_outline</mat-icon>
+                <div>Profile</div>
+            </div>
+        </div>
+        <p class="disconect">Se déconnecter</p>
+    </div>
+
+    <div class="dashboard-panel-right">
+        <div class="navigation-header" fxLayout="row" fxLayoutAlign="space-between center">
+            <h2 class="dashboard-header">Tableau de bord</h2>
+        </div>
+
+        <div class="dashboard-line"></div>
+
+        <div fxLayout="row" fxLayoutAlign="start center">
+
+            <div class="margin-top">
+                <div class="cards-container" fxLayout="row" fxLayoutAlign="start center">
+
+                    <div class="card card_one">
+                        <div class="card-header" fxLayout="row" fxLayoutAlign="space-between center">
+                            <mat-icon class="card-icon card-icon-payslips">description</mat-icon>
+                            <div fxLayout="column" fxLayoutAlign="center end">
+                                <p class="card-label">Fiches de paies</p>
+                                <p class="card-title">12</p>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="card-footer" fxLayout="row" fxLayoutAlign="start center">
+                            <mat-icon class="card-footer-icon">calendar_month</mat-icon>
+                            Dernier document
+                        </div>
+                    </div>
+                    
+                    <div class="card card_two">
+                        <div class="card-header" fxLayout="row" fxLayoutAlign="space-between center">
+                            <mat-icon class="card-icon card-icon-stats">insights</mat-icon>
+                            <div fxLayout="column" fxLayoutAlign="center end">
+                                <p class="card-label">Statistiques</p>
+                                <p class="card-title">+ 4.2%</p>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="card-footer" fxLayout="row" fxLayoutAlign="start center">
+                            <mat-icon class="card-footer-icon">cached</mat-icon>
+                            Mettre à jour
+                        </div>
+                    </div>
+
+                    <div class="card card_three">
+                        <div class="card-header" fxLayout="row" fxLayoutAlign="space-between center">
+                            <mat-icon class="card-icon card-icon-profile">person_outline</mat-icon>
+                            <div fxLayout="column" fxLayoutAlign="center end">
+                                <p class="card-label">Profile</p>
+                                <p class="card-title">100%</p>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="card-footer" fxLayout="row" fxLayoutAlign="start center">
+                            <mat-icon class="card-footer-icon">edit</mat-icon>
+                            Editer le profile
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-bar-container margin-top">
+                    <mat-form-field class="dashboard-header-input" appearance="outline">
+                        <mat-label>Facture</mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <img class="rounded-image" src="https://nntheblog.b-cdn.net/wp-content/uploads/2022/04/luffy.jpg" />
+                <div class="user-info-container" fxLayout="column" fxLayoutAlign="center start">
+                    <h2>Adrien Colombier</h2>
+                    <p class="card-label">Software engineer</p>
+                    <div class="line"></div>
+                    <p class="user-description">I'm a C / C++ developper burning the world</p>
+                    <div class="card-footer" fxLayout="row" fxLayoutAlign="start center">
+                        <mat-icon class="margin-right">email</mat-icon>
+                        adrien.colombier@epitech.eu
+                    </div>
+                    <div class="card-footer" fxLayout="row" fxLayoutAlign="start center">
+                        <mat-icon class="margin-right">call</mat-icon>
+                        (+33) 6 60 62 55 54
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
