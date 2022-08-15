@@ -33,7 +33,7 @@
             <div class="oauth-button-container" fxLayout="column">
                 <div fxLayout="row" fxLayoutAlign="space-between center">
                     <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center"><img class="svg-icons" src="assets/images/facebook.svg" />Facebook</button>
-                    <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center"><img class="svg-icons" src="assets/images/google.svg" />Google</button>
+                    <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center" (click)="signInWithGoogle()"><img class="svg-icons" src="assets/images/google.svg" />Google</button>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="space-between center">
                     <button class="oauth-button" mat-stroked-button fxLayoutAlign="start center"><img class="svg-icons" src="assets/images/github.svg" />GitHub</button>

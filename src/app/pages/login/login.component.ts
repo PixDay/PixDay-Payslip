@@ -51,4 +51,8 @@ export class LoginComponent implements OnInit {
       }
     }
   }
+
+  async signInWithGoogle() {
+    await this.authService.signInWithGoogle();
+  }
 }

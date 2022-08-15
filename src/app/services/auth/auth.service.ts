@@ -88,4 +88,26 @@ export class AuthService {
     };
     return await userRef.set(data, { merge : true });
   }
+
+  // OAuth sign in with Google
+  async signInWithGoogle() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const credential = await this.afAuth.signInWithPopup(provider);
+  }
+
+  // Oauth sign in with Facebook
+  async signInWithFacebook() {
+    const provider = new firebase.auth.FacebookAuthProvider();
+    const credential = await this.afAuth.signInWithPopup(provider);
+  }
+
+  // OAuth sign in with Github
+  async signInWithGithub() {
+    const provider = new firebase.auth.GithubAuthProvider();
+    const credential = await this.afAuth.signInWithPopup(provider);
+  }
+
+  // OAuth sign in with Apple
+  async signInWithApple() {
+  }
 }

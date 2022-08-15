@@ -1,1 +1,35 @@
-<p>statistics works!</p>
+<div class="full-height" fxLayout="row">
+    
+    <div class="dashboard-panel-left" fxLayout="column" fxLayoutAlign="space-between center">
+        <div class="full-width">
+            <div class="navigation-header" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="cicle-icon">circle</mat-icon>
+                <h2>Pix Payslip</h2>
+            </div>
+            <div class="line"></div>
+            <div class="navigation-button" fxLayout="row" fxLayoutAlign="start center" routerLink="/dashboard">
+                <mat-icon class="navigation-icon">dashboard</mat-icon>
+                <div>Tableau de bord</div>
+            </div>
+            <div class="navigation-button" fxLayout="row" fxLayoutAlign="start center" routerLink="/statistics">
+                <mat-icon class="navigation-icon">query_stats</mat-icon>
+                <div>Statistiques</div>
+            </div>
+            <div class="navigation-button" fxLayout="row" fxLayoutAlign="start center" routerLink="/profile">
+                <mat-icon class="navigation-icon">person_outline</mat-icon>
+                <div>Profile</div>
+            </div>
+        </div>
+        <p class="disconect">Se déconnecter</p>
+    </div>
+
+    <div class="dashboard-panel-right">
+        <div class="navigation-header" fxLayout="row" fxLayoutAlign="space-between center">
+            <h2 class="dashboard-header">Statistiques</h2>
+        </div>
+
+        <div class="dashboard-line"></div>
+
+    </div>
+
+</div>
